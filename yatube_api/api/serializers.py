@@ -4,6 +4,7 @@ from rest_framework import serializers
 
 class PostSerializer(serializers.ModelSerializer):
     author = serializers.StringRelatedField()
+
     class Meta:
         model = Post
         fields = ('id', 'text', 'pub_date', 'author', 'image', 'group')
@@ -18,6 +19,7 @@ class GroupSerializer(serializers.ModelSerializer):
 
 class CommentSerializer(serializers.ModelSerializer):
     author = serializers.StringRelatedField()
+
     class Meta:
         model = Comment
         fields = ('id', 'author', 'post', 'text', 'created')

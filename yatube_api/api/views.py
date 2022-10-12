@@ -4,7 +4,7 @@ from posts.models import Comment, Group, Post
 from rest_framework import viewsets
 
 from .serializers import CommentSerializer, GroupSerializer, PostSerializer
- 
+
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
